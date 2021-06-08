@@ -83,6 +83,7 @@ body {
 }
 
 .menu-link {
+  margin-bottom: 28px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -93,6 +94,14 @@ body {
 .menu-link:hover,
 .menu-link:focus {
   color: var(--accent-color);
+}
+
+.menu-item::after {
+  content: "";
+  width: 48px;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
 }
 
 .header-adress {
@@ -133,7 +142,7 @@ body {
   margin-right: 10px;
 }
 
-.mail-svg, 
+.mail-svg,
 .tel-svg {
   fill: var(--grey-color);
 }
@@ -157,12 +166,12 @@ body {
   padding-top: 200px;
   padding-bottom: 200px;
   background-image: linear-gradient(
-    to right,
-    rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)
-  ),
-  url(../img/hero/img-bg-hero.jpg);
-  background-color: #C4C4C4;
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero/img-bg-hero.jpg);
+  background-color: #c4c4c4;
   background-repeat: no-repeat;
   background-position: center;
   /* background-size: cover; */
@@ -282,6 +291,26 @@ body {
   margin-top: 30px;
 }
 
+.about-img-wrapper {
+  position: relative;
+}
+
+.paragraph-about {
+  position: absolute;
+  bottom: 0%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 100%;
+  height: 70px;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background: rgba(47, 48, 58, 0.8);
+}
+
 /* ================END ABOUT============== */
 
 /* ===================TEAM================ */
@@ -320,7 +349,8 @@ body {
   border-right: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   background-color: var(--white-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -354,7 +384,7 @@ body {
 
 /* component */
 .social-list-icon {
-  fill: #AFB1B8;
+  fill: #afb1b8;
 }
 
 .social-list-link {
@@ -376,14 +406,11 @@ body {
   fill: var(--white-color);
 }
 
-
 /* ===================END SOCIAL=========== */
 
 /* ===================END TEAM============== */
 
-
 /* ===================CLIENTS============== */
-
 
 .our-clients {
   padding-top: 94px;
@@ -439,16 +466,11 @@ body {
   fill: var(--accent-color);
 }
 
-
-
 .not-active-icon {
   fill: #afb1b8;
 }
 
-
-
 /* ===================END CLIENTS========== */
-
 
 /* ===================PARTFOLIO============= */
 
@@ -488,7 +510,8 @@ body {
   letter-spacing: 0.03em;
   color: var(--white-color);
   background: #2196f3;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* =======END OF PARTFOLIO BUTTONS======= */
@@ -498,6 +521,33 @@ body {
 .services {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.services-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.services-discription {
+  position: absolute;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 1.6;
+  color: var(--white-color);
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(101%);
+  transition: transform 250ms linear;
+}
+
+.services-link-wrapper:hover .services-discription,
+.services-link-wrapper:focus .services-discription {
+  transform: translateY(0%);
 }
 
 .services-img-list {
@@ -523,7 +573,9 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
-  border: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .services-subtitle {
@@ -532,7 +584,7 @@ body {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  
+  color: #212121;
 }
 
 .services-paragraf {
@@ -608,9 +660,7 @@ body {
   color: var(--footer-font-color);
 }
 
-
 /* ================FOOTER SOCIAL============== */
-
 
 .footer-social-networks-wrapper p {
   margin-bottom: 20px;
