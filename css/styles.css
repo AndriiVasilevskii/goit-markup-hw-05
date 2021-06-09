@@ -33,6 +33,7 @@ img {
   --white-color: #ffffff;
   --footer-font-color: rgba(255, 255, 255, 0.6);
   --bg-color: #f5f4fa;
+  --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -82,12 +83,17 @@ body {
   margin-right: 50px;
 }
 
+.menu-item {
+  position: relative;
+}
+
 .menu-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #212121;
+  transition: 250ms var(--animation-timing-function);
 }
 
 .menu-link:hover,
@@ -95,13 +101,17 @@ body {
   color: var(--accent-color);
 }
 
+.studio-underline {
+  color: var(--accent-color);
+}
+
 .studio-underline::after {
   display: block;
   position: absolute;
-  bottom: 0px;
+  top: 49px;
   left: 0;
   content: "";
-  width: 48px;
+  width: 100%;
   height: 4px;
   background: #2196f3;
   border-radius: 2px;
@@ -120,6 +130,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--grey-color);
+  transition: 250ms var(--animation-timing-function);
 }
 
 .mail-link:hover,
@@ -133,6 +144,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--grey-color);
+  transition: 250ms var(--animation-timing-function);
 }
 
 .tel-link:hover,
@@ -143,6 +155,7 @@ body {
 .tel-svg,
 .mail-svg {
   margin-right: 10px;
+  transition: 250ms var(--animation-timing-function);
 }
 
 .mail-svg,
@@ -205,6 +218,7 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: 0;
   border-radius: 4px;
+  transition: 250ms var(--animation-timing-function);
 }
 
 .modal-btn:hover,
@@ -388,6 +402,7 @@ body {
 /* component */
 .social-list-icon {
   fill: #afb1b8;
+  transition: 250ms var(--animation-timing-function);
 }
 
 .social-list-link {
@@ -397,6 +412,7 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: 250ms var(--animation-timing-function);
 }
 
 .social-list-link:hover,
@@ -439,6 +455,11 @@ body {
   margin-right: 30px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: 250ms var(--animation-timing-function);
+}
+
+.icon-company {
+  transition: 250ms var(--animation-timing-function);
 }
 
 .clients-list-item:nth-child(6n) {
@@ -452,7 +473,7 @@ body {
 
 .clients-list-item:hover,
 .clients-list-item:focus {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--accent-color);;
 }
 
 .clients-list-link {
@@ -467,6 +488,7 @@ body {
 .icon-company:hover,
 .icon-company:focus {
   fill: var(--accent-color);
+  transition: 250ms var(--animation-timing-function);
 }
 
 .not-active-icon {
@@ -515,6 +537,7 @@ body {
   background: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: 250ms var(--animation-timing-function);
 }
 
 /* =======END OF PARTFOLIO BUTTONS======= */
@@ -552,6 +575,7 @@ body {
 .services-link-wrapper:hover .services-discription,
 .services-link-wrapper:focus .services-discription {
   transform: translateY(0%);
+  transition: 250ms var(--animation-timing-function);
 }
 
 .services-img-list {
@@ -570,6 +594,7 @@ body {
 .services-img-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: 250ms var(--animation-timing-function);
 }
 
 .services-about {
@@ -705,9 +730,14 @@ body {
   border-radius: 50%;
 }
 
+.social-icon {
+  fill: var(--white-color);
+}
+
 .social-icon-link:hover,
 .social-icon-link:focus {
   background-color: var(--accent-color);
+  transition: 250ms var(--animation-timing-function);
 }
 
 .social-icon-list-item {
@@ -721,6 +751,7 @@ body {
 .social-icon-link:hover .social-icon,
 .social-icon-link:focus .social-icon {
   fill: var(--white-color);
+  transition: 250ms var(--animation-timing-function);
 }
 /* ================END FOOTER SOCIAL=========== */
 /* ================END FOOTER================ */
