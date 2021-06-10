@@ -108,7 +108,7 @@ body {
 .studio-underline::after {
   display: block;
   position: absolute;
-  top: 49px;
+  top: 48px;
   left: 0;
   content: "";
   width: 100%;
